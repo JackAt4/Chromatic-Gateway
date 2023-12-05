@@ -1,3 +1,5 @@
-res://Scenes/People/player.tscn
-res://Scenes/People/player.gd
 res://Scenes/Levels/level.tscn
+res://Scenes/People/player.tscn
+res://Scenes/Elements/cube.tscn
+res://Scenes/Elements/button.tscn
+res://Scenes/People/player.gd

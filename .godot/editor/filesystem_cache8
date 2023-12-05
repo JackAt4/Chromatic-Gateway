@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701746461
-icon.svg::CompressedTexture2D::3057131409519952987::1701744976::1701744980::1::::<><>::
-::res://Scenes/::1701745618
-::res://Scenes/Levels/::1701745904
-level.tscn::PackedScene::996290282343360462::1701745904::0::1::::<><>::uid://b778xkb5j2vy3::::res://Scenes/People/player.tscn
-::res://Scenes/People/::1701746129
-player.tscn::PackedScene::4700569030415638024::1701746129::0::1::::<><>::
+::res://::1701793630
+icon.svg::CompressedTexture2D::3057131409519952987::1701793607::1701793607::1::::<><>::
+README.md::TextFile::-1::1701793607::0::1::::<><>::
+::res://Scenes/::1701793607
+::res://Scenes/Levels/::1701793607
+level.tscn::PackedScene::996290282343360462::1701793607::0::1::::<><>::uid://b778xkb5j2vy3::::res://Scenes/People/player.tscn
+::res://Scenes/People/::1701793607
+player.gd::GDScript::-1::1701793607::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4700569030415638024::1701793607::0::1::::<><>::res://Scenes/People/player.gd
