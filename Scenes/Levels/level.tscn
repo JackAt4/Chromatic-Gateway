@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://ogu0xh4lo5ru"]
+
+[ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="1_sc2xa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(960, 0)
+scale = Vector2(96, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[node name="Wall2" type="StaticBody2D" parent="Walls"]
+position = Vector2(960, 1080)
+scale = Vector2(96, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall2"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[node name="Wall3" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, 540)
+scale = Vector2(3, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall3"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[node name="Wall4" type="StaticBody2D" parent="Walls"]
+position = Vector2(1920, 540)
+scale = Vector2(3, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall4"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_sc2xa")]
+position = Vector2(237, 271)
