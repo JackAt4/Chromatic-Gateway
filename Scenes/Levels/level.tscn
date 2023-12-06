@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ogu0xh4lo5ru"]
 
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="1_sc2xa"]
-[ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/cube.tscn" id="2_oocfu"]
+[ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="2_oocfu"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="3_uh0ri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
@@ -72,5 +72,5 @@ position = Vector2(978, 545)
 [node name="Player" parent="." instance=ExtResource("1_sc2xa")]
 position = Vector2(623, 719)
 
-[node name="Cube" parent="." instance=ExtResource("2_oocfu")]
-position = Vector2(830, 577)
+[node name="Box" parent="." instance=ExtResource("2_oocfu")]
+position = Vector2(837, 639)
