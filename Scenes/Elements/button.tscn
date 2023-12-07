@@ -20,7 +20,7 @@ offset_right = 56.0
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.364706, 0.364706, 0.364706, 1)
+color = Color(0.282353, 0.282353, 0.282353, 1)
 
 [node name="Press" type="ColorRect" parent="."]
 anchors_preset = 8
@@ -34,4 +34,4 @@ offset_right = 45.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.654902, 0.654902, 0.654902, 1)
+color = Color(0.580392, 0.580392, 0.580392, 1)

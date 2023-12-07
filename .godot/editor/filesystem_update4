@@ -1,7 +1,6 @@
 res://Scenes/Levels/level.tscn
 res://Scenes/People/player.tscn
-res://Scenes/People/player.gd
-res://Scenes/Elements/box.tscn
-res://Scenes/Elements/button.tscn
-res://Scenes/Levels/Door.gd
 res://Scenes/Elements/door.tscn
+res://Scenes/Elements/button.tscn
+res://Scenes/Elements/Door.gd
+res://Scenes/Levels/level1.tscn

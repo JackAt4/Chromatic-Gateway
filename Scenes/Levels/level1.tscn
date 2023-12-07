@@ -1,14 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://ogu0xh4lo5ru"]
+[gd_scene load_steps=8 format=3 uid="uid://ogu0xh4lo5ru"]
 
-[ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="1_sc2xa"]
-[ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="2_oocfu"]
-[ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="3_uh0ri"]
-[ext_resource type="Script" path="res://Scenes/Levels/Door.gd" id="4_6qje2"]
-[ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="4_y1w83"]
+[ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="1_1kir8"]
+[ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="2_s50gi"]
+[ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="3_omho1"]
+[ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="4_mdbf6"]
+[ext_resource type="Script" path="res://Scenes/Elements/Door.gd" id="5_1pdw1"]
+[ext_resource type="Texture2D" uid="uid://chhatmk2ursl8" path="res://Assets/dial.png" id="6_aevsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
 
-[node name="Level" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -87,21 +88,44 @@ offset_bottom = 10.0
 color = Color(0.611765, 0.611765, 0.611765, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" parent="." instance=ExtResource("3_uh0ri")]
+[node name="Button" parent="." instance=ExtResource("1_1kir8")]
 position = Vector2(978, 540)
 collision_layer = 5
 collision_mask = 5
 
-[node name="Player" parent="." instance=ExtResource("1_sc2xa")]
+[node name="Player" parent="." instance=ExtResource("2_s50gi")]
 position = Vector2(623, 719)
 
-[node name="Box" parent="." instance=ExtResource("2_oocfu")]
+[node name="Box" parent="." instance=ExtResource("3_omho1")]
 position = Vector2(778, 634)
 
-[node name="Door" parent="." instance=ExtResource("4_y1w83")]
+[node name="Door" parent="." instance=ExtResource("4_mdbf6")]
 position = Vector2(1904, 540)
 scale = Vector2(1, 9)
-script = ExtResource("4_6qje2")
+script = ExtResource("5_1pdw1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 1530.0
+offset_right = 1794.0
+offset_bottom = 218.0
+color = Color(0.803922, 0.803922, 0.803922, 1)
+
+[node name="Red" type="Button" parent="CanvasLayer"]
+offset_left = 1591.48
+offset_top = 34.0
+offset_right = 1737.48
+offset_bottom = 180.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Red"]
+position = Vector2(15.805, 16.475)
+scale = Vector2(0.169063, 0.169063)
+texture = ExtResource("6_aevsc")
+offset = Vector2(325, 325)
 
 [connection signal="body_entered" from="Button" to="Door" method="_on_button_body_entered"]
 [connection signal="body_exited" from="Button" to="Door" method="_on_button_body_exited"]
