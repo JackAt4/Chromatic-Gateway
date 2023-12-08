@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cb1njoqliiev"]
+[gd_scene load_steps=12 format=3 uid="uid://cb1njoqliiev"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Level2/Global2.gd" id="1_vcbqs"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="2_28qqt"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="5_nov7g"]
 [ext_resource type="Texture2D" uid="uid://chhatmk2ursl8" path="res://Assets/dial.png" id="7_kt14x"]
 [ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="8_r6a44"]
+[ext_resource type="PackedScene" uid="uid://b3kufmbenv510" path="res://Scenes/Elements/RedPickup.tscn" id="9_ukyle"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
 
@@ -106,6 +107,9 @@ collision_layer = 5
 collision_mask = 5
 script = ExtResource("3_6gclh")
 
+[node name="RedPickup" parent="." instance=ExtResource("9_ukyle")]
+position = Vector2(1560, 550)
+
 [node name="Player" parent="." instance=ExtResource("3_65jny")]
 position = Vector2(920, 544)
 
@@ -117,7 +121,14 @@ position = Vector2(1904, 540)
 scale = Vector2(1, 9)
 requiredAmount = 2
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1944, 538)
+shape = SubResource("RectangleShape2D_3f758")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 1530.0
@@ -140,6 +151,16 @@ scale = Vector2(0.1819, 0.1819)
 texture = ExtResource("7_kt14x")
 centered = false
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 1545.0
+offset_top = 175.0
+offset_right = 1778.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Press the Dial"
+horizontal_alignment = 1
+
 [node name="ca" parent="CanvasLayer" instance=ExtResource("8_r6a44")]
 visible = false
 mouse_filter = 2
@@ -151,15 +172,9 @@ visible = false
 modulate = Color(1, 0, 0, 1)
 position = Vector2(1189, 802)
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1944, 538)
-shape = SubResource("RectangleShape2D_3f758")
-
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
 [connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
 [connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
-[connection signal="toggled" from="CanvasLayer/Red" to="." method="_on_red_toggled"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="toggled" from="CanvasLayer/Red" to="." method="_on_red_toggled"]

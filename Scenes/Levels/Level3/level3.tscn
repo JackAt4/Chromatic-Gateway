@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://iux8buwl3o0k"]
+[gd_scene load_steps=11 format=3 uid="uid://iux8buwl3o0k"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Level2/Global2.gd" id="1_tt7tj"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="2_ltujg"]
@@ -6,12 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_jmjdw"]
 [ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="5_yfoef"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="6_c4ocy"]
+[ext_resource type="PackedScene" uid="uid://b3kufmbenv510" path="res://Scenes/Elements/RedPickup.tscn" id="7_vxi76"]
 [ext_resource type="Texture2D" uid="uid://chhatmk2ursl8" path="res://Assets/dial.png" id="8_qjkx1"]
 [ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="9_84v77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 script = ExtResource("1_tt7tj")
 
 [node name="Walls" type="Node2D" parent="."]
@@ -172,23 +173,26 @@ position = Vector2(142, 249)
 [node name="Door" parent="." instance=ExtResource("6_c4ocy")]
 position = Vector2(1904, 540)
 scale = Vector2(1, 9)
-requiredAmount = 2
 
 [node name="Door2" parent="." instance=ExtResource("6_c4ocy")]
 position = Vector2(1384, 540)
 scale = Vector2(1, 9)
+requiredAmount = 2
 
 [node name="Door3" parent="." instance=ExtResource("6_c4ocy")]
 position = Vector2(884.545, 540)
 scale = Vector2(1, 9)
-requiredAmount = 2
+
+[node name="RedPickup" parent="." instance=ExtResource("7_vxi76")]
+position = Vector2(1157, 223)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = 1530.0
-offset_right = 1794.0
-offset_bottom = 218.0
+offset_left = 1526.0
+offset_right = 1798.0
+offset_bottom = 241.0
 color = Color(0.803922, 0.803922, 0.803922, 1)
 
 [node name="Red" type="Button" parent="CanvasLayer"]
@@ -205,6 +209,17 @@ flat = true
 scale = Vector2(0.1819, 0.1819)
 texture = ExtResource("8_qjkx1")
 centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 1533.0
+offset_top = 171.0
+offset_right = 1792.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "The objects only exist when the dial is turned"
+horizontal_alignment = 1
+autowrap_mode = 1
 
 [node name="ca" parent="CanvasLayer" instance=ExtResource("9_84v77")]
 visible = false

@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var tutorial = true
+
 func _ready(): # ----- Ensures theres no collision with the box
 	get_node("RedLayer/Box/CollisionShape2D").set_deferred("disabled", true)
 
@@ -10,6 +12,10 @@ func _on_red_toggled(button_pressed): # ----- The dial switch code -----
 		get_node("CanvasLayer/Red/Dial").flip_v = true
 		get_node("RedLayer/Box/CollisionShape2D").set_deferred("disabled", false)
 		get_node("RedLayer").show()
+		if tutorial:
+			tutorial = false
+			get_node("CanvasLayer/Label").queue_free()
+		
 	else:
 		get_node("CanvasLayer/ca").hide()
 		get_node("CanvasLayer/Red/Dial").flip_h = false

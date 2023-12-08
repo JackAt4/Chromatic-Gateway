@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqq2aqwg4owsy"]
+[gd_scene load_steps=9 format=3 uid="uid://cqq2aqwg4owsy"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Level1/Global1.gd" id="1_nok50"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="2_k61tx"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_ixi4t"]
 [ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="5_mtsbf"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="6_4xk5h"]
-[ext_resource type="Script" path="res://Scenes/Elements/Door.gd" id="7_dhf6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
 
@@ -108,7 +107,6 @@ position = Vector2(1269, 677)
 [node name="Door" parent="." instance=ExtResource("6_4xk5h")]
 position = Vector2(1904, 540)
 scale = Vector2(1, 9)
-script = ExtResource("7_dhf6u")
 
 [node name="Area2D" type="Area2D" parent="."]
 
