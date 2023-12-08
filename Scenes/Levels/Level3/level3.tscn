@@ -1,0 +1,224 @@
+[gd_scene load_steps=10 format=3 uid="uid://iux8buwl3o0k"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/Level2/Global2.gd" id="1_tt7tj"]
+[ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="2_ltujg"]
+[ext_resource type="Script" path="res://Scenes/Elements/button2.gd" id="3_tv7xe"]
+[ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_jmjdw"]
+[ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="5_yfoef"]
+[ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="6_c4ocy"]
+[ext_resource type="Texture2D" uid="uid://chhatmk2ursl8" path="res://Assets/dial.png" id="8_qjkx1"]
+[ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="9_84v77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_tt7tj")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(960, 0)
+scale = Vector2(96, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall2" type="StaticBody2D" parent="Walls"]
+position = Vector2(960, 1080)
+scale = Vector2(96, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall2"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall3" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, 540)
+scale = Vector2(3, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall3"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall4" type="StaticBody2D" parent="Walls"]
+position = Vector2(1920, 210)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall4"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall5" type="StaticBody2D" parent="Walls"]
+position = Vector2(1920, 870)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall5"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall5"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall6" type="StaticBody2D" parent="Walls"]
+position = Vector2(1400, 210)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall6"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall6"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall7" type="StaticBody2D" parent="Walls"]
+position = Vector2(1400, 870)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall7"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall7"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall8" type="StaticBody2D" parent="Walls"]
+position = Vector2(900, 210)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall8"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall8"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall9" type="StaticBody2D" parent="Walls"]
+position = Vector2(900, 870)
+scale = Vector2(3, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall9"]
+shape = SubResource("RectangleShape2D_ubkug")
+
+[node name="ColorRect" type="ColorRect" parent="Walls/Wall9"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" parent="." instance=ExtResource("2_ltujg")]
+position = Vector2(137, 134)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("3_tv7xe")
+
+[node name="Button2" parent="." instance=ExtResource("2_ltujg")]
+position = Vector2(299, 135)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("3_tv7xe")
+
+[node name="Player" parent="." instance=ExtResource("4_jmjdw")]
+position = Vector2(172, 456)
+
+[node name="Box" parent="." instance=ExtResource("5_yfoef")]
+position = Vector2(142, 249)
+
+[node name="Door" parent="." instance=ExtResource("6_c4ocy")]
+position = Vector2(1904, 540)
+scale = Vector2(1, 9)
+requiredAmount = 2
+
+[node name="Door2" parent="." instance=ExtResource("6_c4ocy")]
+position = Vector2(1384, 540)
+scale = Vector2(1, 9)
+
+[node name="Door3" parent="." instance=ExtResource("6_c4ocy")]
+position = Vector2(884.545, 540)
+scale = Vector2(1, 9)
+requiredAmount = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 1530.0
+offset_right = 1794.0
+offset_bottom = 218.0
+color = Color(0.803922, 0.803922, 0.803922, 1)
+
+[node name="Red" type="Button" parent="CanvasLayer"]
+offset_left = 1589.48
+offset_top = 30.0
+offset_right = 1735.48
+offset_bottom = 176.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+flat = true
+
+[node name="Dial" type="Sprite2D" parent="CanvasLayer/Red"]
+scale = Vector2(0.1819, 0.1819)
+texture = ExtResource("8_qjkx1")
+centered = false
+
+[node name="ca" parent="CanvasLayer" instance=ExtResource("9_84v77")]
+visible = false
+mouse_filter = 2
+
+[node name="RedLayer" type="Node2D" parent="."]
+visible = false
+
+[node name="Box" parent="RedLayer" instance=ExtResource("5_yfoef")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(296, 250)
+
+[connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
+[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
+[connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
+[connection signal="toggled" from="CanvasLayer/Red" to="." method="_on_red_toggled"]

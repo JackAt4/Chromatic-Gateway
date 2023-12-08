@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce1xtd52ueli8"]
+[gd_scene load_steps=3 format=3 uid="uid://ce1xtd52ueli8"]
+
+[ext_resource type="Script" path="res://Scenes/Elements/Door.gd" id="1_yf2sm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnt"]
 
 [node name="Door" type="StaticBody2D"]
+script = ExtResource("1_yf2sm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_c4wnt")
