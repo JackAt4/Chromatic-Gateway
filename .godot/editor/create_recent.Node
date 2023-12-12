@@ -1,8 +1,8 @@
+Label
 TileMap
 CanvasLayer
 CanvasGroup
 Button
-Label
 TextEdit
 Sprite2D
 CollisionShape2D

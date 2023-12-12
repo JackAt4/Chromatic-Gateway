@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://iux8buwl3o0k"]
+[gd_scene load_steps=12 format=3 uid="uid://iux8buwl3o0k"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Level2/Global2.gd" id="1_tt7tj"]
+[ext_resource type="TileSet" uid="uid://ccueodkpc20v0" path="res://Scenes/Levels/tileset.tres" id="2_6ngre"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="2_ltujg"]
 [ext_resource type="Script" path="res://Scenes/Elements/button2.gd" id="3_tv7xe"]
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_jmjdw"]
@@ -10,178 +11,48 @@
 [ext_resource type="Texture2D" uid="uid://d1rfeq3l0ihxx" path="res://Assets/redDial.png" id="8_8hngi"]
 [ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="9_84v77"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1nsi"]
+size = Vector2(51, 281)
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_tt7tj")
 
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="Wall" type="StaticBody2D" parent="Walls"]
-position = Vector2(960, 0)
-scale = Vector2(96, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall2" type="StaticBody2D" parent="Walls"]
-position = Vector2(960, 1080)
-scale = Vector2(96, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall2"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall3" type="StaticBody2D" parent="Walls"]
-position = Vector2(0, 540)
-scale = Vector2(3, 57)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall3"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall4" type="StaticBody2D" parent="Walls"]
-position = Vector2(1920, 210)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall4"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall5" type="StaticBody2D" parent="Walls"]
-position = Vector2(1920, 870)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall5"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall5"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall6" type="StaticBody2D" parent="Walls"]
-position = Vector2(1400, 210)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall6"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall6"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall7" type="StaticBody2D" parent="Walls"]
-position = Vector2(1400, 870)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall7"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall7"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall8" type="StaticBody2D" parent="Walls"]
-position = Vector2(900, 210)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall8"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall8"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Wall9" type="StaticBody2D" parent="Walls"]
-position = Vector2(900, 870)
-scale = Vector2(3, 24)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall9"]
-shape = SubResource("RectangleShape2D_ubkug")
-
-[node name="ColorRect" type="ColorRect" parent="Walls/Wall9"]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.611765, 0.611765, 0.611765, 1)
-metadata/_edit_use_anchors_ = true
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = ExtResource("2_6ngre")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 196609, 1, 65536, 131073, 1, 131072, 131073, 1, 196608, 131073, 1, 262144, 131073, 1, 327680, 131073, 1, 589824, 131073, 1, 524288, 131073, 1, 458752, 131073, 1, 393216, 131073, 1, 655360, 131073, 1, 720896, 196609, 2, 720897, 65537, 0, 720898, 65537, 0, 720899, 65537, 0, 720900, 65537, 0, 720901, 65537, 0, 720902, 65537, 0, 720903, 65537, 0, 720904, 196609, 3, 720905, 196609, 2, 720906, 65537, 0, 720907, 65537, 0, 720908, 65537, 0, 720909, 65537, 0, 720910, 196609, 3, 720911, 196609, 2, 720912, 65537, 0, 720913, 65537, 0, 720914, 65537, 0, 720915, 196609, 0, 458771, 1, 0, 524307, 1, 1, 589843, 1, 1, 655379, 1, 1, 196627, 1, 2, 131091, 1, 1, 65555, 1, 1, 19, 196609, 3, 18, 65537, 2, 17, 65537, 2, 16, 65537, 2, 15, 196609, 1, 14, 196609, 3, 13, 65537, 2, 12, 65537, 2, 11, 65537, 2, 10, 65537, 2, 9, 196609, 1, 8, 196609, 3, 7, 65537, 2, 6, 65537, 2, 5, 65537, 2, 4, 65537, 2, 3, 65537, 2, 2, 65537, 2, 1, 65537, 2, 65544, 1, 1, 131080, 1, 1, 196616, 1, 2, 65545, 131073, 1, 131081, 131073, 1, 196617, 131073, 2, 458760, 1, 0, 524296, 1, 1, 589832, 1, 1, 655368, 1, 1, 458761, 131073, 0, 524297, 131073, 1, 589833, 131073, 1, 655369, 131073, 1, 65550, 1, 1, 131086, 1, 1, 196622, 1, 2, 65551, 131073, 1, 131087, 131073, 1, 196623, 131073, 2, 458766, 1, 0, 524302, 1, 1, 589838, 1, 1, 655374, 1, 1, 458767, 131073, 0, 524303, 131073, 1, 589839, 131073, 1, 655375, 131073, 1)
 
 [node name="Button" parent="." instance=ExtResource("2_ltujg")]
-position = Vector2(137, 134)
+position = Vector2(204, 230)
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("3_tv7xe")
 
 [node name="Button2" parent="." instance=ExtResource("2_ltujg")]
-position = Vector2(299, 135)
+position = Vector2(366, 231)
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("3_tv7xe")
 
 [node name="Player" parent="." instance=ExtResource("4_jmjdw")]
-position = Vector2(172, 456)
+position = Vector2(397, 533)
 
 [node name="Box" parent="." instance=ExtResource("5_yfoef")]
-position = Vector2(142, 249)
+position = Vector2(209, 345)
 
 [node name="Door" parent="." instance=ExtResource("6_c4ocy")]
-position = Vector2(1904, 540)
-scale = Vector2(1, 9)
+position = Vector2(1881.23, 525.315)
+scale = Vector2(1, 14.4)
 
 [node name="Door2" parent="." instance=ExtResource("6_c4ocy")]
-position = Vector2(1384, 540)
-scale = Vector2(1, 9)
+position = Vector2(1447.95, 525.805)
+scale = Vector2(1, 14.4)
 requiredAmount = 2
 
 [node name="Door3" parent="." instance=ExtResource("6_c4ocy")]
-position = Vector2(884.545, 540)
-scale = Vector2(1, 9)
+position = Vector2(865.11, 527.26)
+scale = Vector2(1, 14.4)
 
 [node name="RedPickup" parent="." instance=ExtResource("7_vxi76")]
 position = Vector2(1157, 223)
@@ -206,9 +77,9 @@ toggle_mode = true
 flat = true
 
 [node name="Dial" type="Sprite2D" parent="CanvasLayer/Red"]
+position = Vector2(72.52, 67)
 scale = Vector2(4.58, 4.58)
 texture = ExtResource("8_8hngi")
-centered = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 1533.0
@@ -230,10 +101,18 @@ visible = false
 
 [node name="Box" parent="RedLayer" instance=ExtResource("5_yfoef")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(296, 250)
+position = Vector2(363, 346)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1947, 527.5)
+shape = SubResource("RectangleShape2D_l1nsi")
 
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
 [connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
 [connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
 [connection signal="toggled" from="CanvasLayer/Red" to="." method="_on_red_toggled"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
