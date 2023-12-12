@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="5_yfoef"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="6_c4ocy"]
 [ext_resource type="PackedScene" uid="uid://b3kufmbenv510" path="res://Scenes/Elements/RedPickup.tscn" id="7_vxi76"]
-[ext_resource type="Texture2D" uid="uid://chhatmk2ursl8" path="res://Assets/dial.png" id="8_qjkx1"]
+[ext_resource type="Texture2D" uid="uid://d1rfeq3l0ihxx" path="res://Assets/redDial.png" id="8_8hngi"]
 [ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="9_84v77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubkug"]
@@ -206,8 +206,8 @@ toggle_mode = true
 flat = true
 
 [node name="Dial" type="Sprite2D" parent="CanvasLayer/Red"]
-scale = Vector2(0.1819, 0.1819)
-texture = ExtResource("8_qjkx1")
+scale = Vector2(4.58, 4.58)
+texture = ExtResource("8_8hngi")
 centered = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]

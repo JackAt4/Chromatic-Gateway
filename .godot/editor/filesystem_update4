@@ -1,6 +1,7 @@
-res://Scenes/Levels/Level3/level3.tscn
+res://Scenes/Levels/Level2/level2.tscn
 res://Scenes/Elements/Door.gd
 res://Scenes/Levels/ca.gdshader
-res://Scenes/Levels/Level2/level2.tscn
-res://Scenes/Levels/Menu/StartGame.gd
+res://Scenes/Levels/Level3/level3.tscn
+res://Scenes/Elements/RedPickup.tscn
 res://Scenes/Levels/Menu/MainMenu.tscn
+res://Scenes/Levels/Level1/level1.tscn
