@@ -1,7 +1,7 @@
+TileMap
 ColorRect
 CollisionShape2D
 Area2D
-TileMap
 Label
 CanvasLayer
 CanvasGroup

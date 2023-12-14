@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs05wjs23q65q"]
+[gd_scene load_steps=5 format=3 uid="uid://cs05wjs23q65q"]
 
 [ext_resource type="TileSet" uid="uid://ccueodkpc20v0" path="res://Scenes/Levels/tileset.tres" id="1_y0pql"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="2_3fx3j"]
 [ext_resource type="PackedScene" uid="uid://dkhprb0xddxw7" path="res://Scenes/Elements/switch.tscn" id="3_7pcft"]
-[ext_resource type="Script" path="res://Scenes/Elements/switch.gd" id="4_7f3xo"]
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_idboc"]
 
 [node name="tutorial2" type="Node2D"]
@@ -20,10 +19,6 @@ scale = Vector2(1, 14.4)
 
 [node name="Switch" parent="." instance=ExtResource("3_7pcft")]
 position = Vector2(1056, 358)
-script = ExtResource("4_7f3xo")
 
 [node name="Player" parent="." instance=ExtResource("4_idboc")]
 position = Vector2(516, 548)
-
-[connection signal="body_entered" from="Switch" to="Switch" method="_on_body_entered"]
-[connection signal="body_exited" from="Switch" to="Switch" method="_on_body_exited"]

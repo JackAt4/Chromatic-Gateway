@@ -2,9 +2,6 @@ extends CharacterBody2D
 
 # ----- Variables ------
 const speed = 325.0
-var keyPressed = false
-var holding = false
-var box
 
 func handleInput(): # ----- Movement Code -----
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

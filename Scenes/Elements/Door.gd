@@ -3,6 +3,7 @@ extends StaticBody2D
 # ----- Variables -----
 var actions = 0
 @export var requiredAmount = 1
+@export var exact = false
 
 func button_check(pressed):
 	if pressed: # ----- Counts how many buttons has been pushed
@@ -10,7 +11,14 @@ func button_check(pressed):
 	else:
 		actions -= 1
 		
-	if actions == requiredAmount: # ----- Checks if enough buttons has been pushed
+	if actions == requiredAmount and exact: # ----- Checks if enough buttons has been pushed
+		hide()
+		$CollisionShape2D.set_deferred("disabled", true)
+	else:
+		show()
+		$CollisionShape2D.set_deferred("disabled", false)
+		
+	if actions >= requiredAmount and !exact:
 		hide()
 		$CollisionShape2D.set_deferred("disabled", true)
 	else:
