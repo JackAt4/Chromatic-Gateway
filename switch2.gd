@@ -5,7 +5,7 @@ var bodies = 0
 var switched = false
 var keyPressed = false
 
-func _process(delta): # Checks if spacebar is pressed
+func _process(_delta): # Checks if spacebar is pressed
 	if Input.is_action_pressed("ui_accept"):
 		if !keyPressed:
 			keyPressed = true

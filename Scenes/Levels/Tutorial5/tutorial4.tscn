@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Levels/Tutorial4/Global2.gd" id="1_a58pc"]
 [ext_resource type="TileSet" uid="uid://ccueodkpc20v0" path="res://Scenes/Levels/tileset.tres" id="2_wprlk"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="3_8hsci"]
-[ext_resource type="Script" path="res://Scenes/Elements/button2.gd" id="4_jhwbx"]
+[ext_resource type="Script" path="res://Scenes/Elements/button.gd" id="4_qxt5a"]
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="5_qrtk0"]
 [ext_resource type="PackedScene" uid="uid://c4d7hon2iwllk" path="res://Scenes/Elements/box.tscn" id="6_g0w2j"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="7_8dtun"]
@@ -27,13 +27,15 @@ layer_0/tile_data = PackedInt32Array(0, 196609, 1, 65536, 131073, 1, 131072, 131
 position = Vector2(204, 230)
 collision_layer = 5
 collision_mask = 5
-script = ExtResource("4_jhwbx")
+script = ExtResource("4_qxt5a")
+doorCount = 2
 
 [node name="Button2" parent="." instance=ExtResource("3_8hsci")]
 position = Vector2(366, 231)
 collision_layer = 5
 collision_mask = 5
-script = ExtResource("4_jhwbx")
+script = ExtResource("4_qxt5a")
+doorCount = 2
 
 [node name="Player" parent="." instance=ExtResource("5_qrtk0")]
 position = Vector2(310, 528)
@@ -44,6 +46,9 @@ position = Vector2(209, 345)
 [node name="Door" parent="." instance=ExtResource("7_8dtun")]
 position = Vector2(1881.23, 528.315)
 scale = Vector2(1, 14.4)
+script = ExtResource("4_qxt5a")
+bodies = 0
+doorCount = 0
 
 [node name="Door2" parent="." instance=ExtResource("7_8dtun")]
 position = Vector2(1447.95, 527.805)
