@@ -23,3 +23,5 @@ func _on_body_exited(body): # ----- Same as previous but for removing one from t
 	if body.get_collision_layer() == 4 or body.get_collision_layer() == 1:
 		if bodies == 0:
 			get_node("../Door").button_check(false)
+			for i in range(doorCount): # ----- If there's more than one door, notify those doors
+					get_node("../Door" + str(i + 2)).button_check(false)

@@ -21,9 +21,8 @@ func _on_red_toggled(button_pressed): # ----- The dial switch code -----
 		get_node("RedLayer/Box/CollisionShape2D").set_deferred("disabled", true)
 		get_node("RedLayer").hide()
 
-
-func _on_area_2d_body_entered(body): # ----- Changes Level
-	get_tree().change_scene_to_file("res://Scenes/Levels/Level3/level3.tscn")
+func _on_area_2d_body_entered(body):
+	get_tree().change_scene_to_file("res://Scenes/Levels/Tutorial5/tutorial5.tscn")
 
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):

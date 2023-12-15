@@ -1,6 +1,5 @@
 [gd_scene load_steps=12 format=3 uid="uid://iux8buwl3o0k"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/Tutorial4/Global2.gd" id="1_a58pc"]
 [ext_resource type="TileSet" uid="uid://ccueodkpc20v0" path="res://Scenes/Levels/tileset.tres" id="2_wprlk"]
 [ext_resource type="PackedScene" uid="uid://daeg63xk7vl8b" path="res://Scenes/Elements/button.tscn" id="3_8hsci"]
 [ext_resource type="Script" path="res://Scenes/Elements/button.gd" id="4_qxt5a"]
@@ -11,11 +10,43 @@
 [ext_resource type="Texture2D" uid="uid://d1rfeq3l0ihxx" path="res://Assets/redDial.png" id="9_ag7d8"]
 [ext_resource type="PackedScene" uid="uid://b7imulytklr11" path="res://Scenes/Levels/ca.tscn" id="10_hojh0"]
 
+[sub_resource type="GDScript" id="GDScript_36l1k"]
+script/source = "extends Node2D
+
+@export var tutorial = true
+
+func _ready(): # ----- Ensures theres no collision with the box
+	get_node(\"RedLayer/Box/CollisionShape2D\").set_deferred(\"disabled\", true)
+
+func _on_red_toggled(button_pressed): # ----- The dial switch code -----
+	if button_pressed:
+		get_node(\"CanvasLayer/ca\").show()
+		get_node(\"CanvasLayer/Red/Dial\").set_rotation_degrees(90)
+		get_node(\"RedLayer/Box/CollisionShape2D\").set_deferred(\"disabled\", false)
+		get_node(\"RedLayer\").show()
+		if tutorial:
+			tutorial = false
+			get_node(\"CanvasLayer/Label\").queue_free()
+		
+	else:
+		get_node(\"CanvasLayer/ca\").hide()
+		get_node(\"CanvasLayer/Red/Dial\").set_rotation_degrees(0)
+		get_node(\"RedLayer/Box/CollisionShape2D\").set_deferred(\"disabled\", true)
+		get_node(\"RedLayer\").hide()
+
+func _on_area_2d_body_entered(body):
+	get_tree().change_scene_to_file(\"res://Scenes/Levels/Tutorial5/tutorial5.tscn\")
+
+
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	get_tree().quit()
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1nsi"]
 size = Vector2(51, 281)
 
 [node name="Level3" type="Node2D"]
-script = ExtResource("1_a58pc")
+script = SubResource("GDScript_36l1k")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
@@ -46,9 +77,7 @@ position = Vector2(209, 345)
 [node name="Door" parent="." instance=ExtResource("7_8dtun")]
 position = Vector2(1881.23, 528.315)
 scale = Vector2(1, 14.4)
-script = ExtResource("4_qxt5a")
-bodies = 0
-doorCount = 0
+exact = true
 
 [node name="Door2" parent="." instance=ExtResource("7_8dtun")]
 position = Vector2(1447.95, 527.805)
@@ -56,8 +85,9 @@ scale = Vector2(1, 14.4)
 requiredAmount = 2
 
 [node name="Door3" parent="." instance=ExtResource("7_8dtun")]
-position = Vector2(865.11, 528.26)
+position = Vector2(863.225, 528.315)
 scale = Vector2(1, 14.4)
+exact = true
 
 [node name="RedPickup" parent="." instance=ExtResource("8_1t54c")]
 position = Vector2(1157, 223)
@@ -119,5 +149,4 @@ shape = SubResource("RectangleShape2D_l1nsi")
 [connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
 [connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
 [connection signal="toggled" from="CanvasLayer/Red" to="." method="_on_red_toggled"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

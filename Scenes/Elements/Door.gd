@@ -14,11 +14,7 @@ func button_check(pressed):
 	if actions == requiredAmount and exact: # ----- Checks if enough buttons has been pushed
 		hide()
 		$CollisionShape2D.set_deferred("disabled", true)
-	else:
-		show()
-		$CollisionShape2D.set_deferred("disabled", false)
-		
-	if actions >= requiredAmount and !exact:
+	elif actions >= requiredAmount and !exact:
 		hide()
 		$CollisionShape2D.set_deferred("disabled", true)
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs05wjs23q65q"]
+[gd_scene load_steps=8 format=3 uid="uid://cs05wjs23q65q"]
 
 [ext_resource type="TileSet" uid="uid://ccueodkpc20v0" path="res://Scenes/Levels/tileset.tres" id="1_y0pql"]
 [ext_resource type="PackedScene" uid="uid://ce1xtd52ueli8" path="res://Scenes/Elements/door.tscn" id="2_3fx3j"]
@@ -6,7 +6,21 @@
 [ext_resource type="Script" path="res://Scenes/Elements/switch.gd" id="4_7f3xo"]
 [ext_resource type="PackedScene" uid="uid://b778xkb5j2vy3" path="res://Scenes/People/player.tscn" id="4_idboc"]
 
+[sub_resource type="GDScript" id="GDScript_qpntu"]
+script/source = "extends Node2D
+
+@export var scenePath = \"res://Scenes/Levels/Tutorial2/tutorial2.tscn\"
+
+func _on_area_2d_body_entered(body): # ----- Changes Level
+	get_tree().change_scene_to_file(scenePath)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mdhx"]
+size = Vector2(51, 281)
+
 [node name="tutorial2" type="Node2D"]
+script = SubResource("GDScript_qpntu")
+scenePath = "res://Scenes/Levels/Tutorial3/tutorial3.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
@@ -25,5 +39,12 @@ script = ExtResource("4_7f3xo")
 [node name="Player" parent="." instance=ExtResource("4_idboc")]
 position = Vector2(516, 548)
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1947, 527.5)
+shape = SubResource("RectangleShape2D_5mdhx")
+
 [connection signal="body_entered" from="Switch" to="Switch" method="_on_body_entered"]
 [connection signal="body_exited" from="Switch" to="Switch" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
