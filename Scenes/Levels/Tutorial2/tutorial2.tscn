@@ -45,6 +45,14 @@ position = Vector2(516, 548)
 position = Vector2(1947, 527.5)
 shape = SubResource("RectangleShape2D_5mdhx")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 15.0
+offset_right = 945.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "Press SPACE to use switch"
+
 [connection signal="body_entered" from="Switch" to="Switch" method="_on_body_entered"]
 [connection signal="body_exited" from="Switch" to="Switch" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
